@@ -1,0 +1,143 @@
+@use "/styles/main.scss" as *;
+
+.header {
+  background-color: $col-white;
+  height: toRem(80);
+  padding: 1.2rem 3.2rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e2e8f0;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  display: flex;
+  gap: 2.4rem;
+  align-items: center;
+  justify-content: space-between;
+
+  // @include media("<=tablet") {
+  //   grid-column: 1 / 3;
+  //   gap: toRem(10);
+  //   height: toRem(60);
+  //   padding: toRem(0) toRem(20);
+  //   border-bottom: none;
+  // }
+
+  // Left Section
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: toRem(16);
+
+    .logo {
+      height: toRem(24);
+    }
+
+    // @include media("<=tablet") {
+    //   display: none;
+    // }
+  }
+
+  // Right Section
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: toRem(16);
+
+    // @include media("<=tablet") {
+    //   width: 100%;
+    //   justify-content: space-between;
+    // }
+
+    // Search Input
+    &__search {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      // @include media("<=tablet") {
+      //   width: 90%;
+      // }
+
+      &__input {
+        width: toRem(280);
+        height: toRem(40);
+        border-radius: toRem(20);
+        background-color: rgba(203, 213, 225, 0.2);
+        outline: none;
+        border: none;
+        padding-left: toRem(45);
+        box-sizing: border-box;
+        font-weight: 400;
+        font-size: toRem(13);
+        color: #000000;
+        line-height: toRem(18.28);
+        font-family: var(--font-outfit);
+
+        // @include media("<=tablet") {
+        //   width: 100%;
+        // }
+      }
+
+      &__input::placeholder {
+        font-weight: 400;
+        font-size: toRem(13);
+        color: #000000;
+        line-height: toRem(18.28);
+        font-family: var(--font-outfit);
+      }
+
+      &__inputIcon {
+        position: absolute;
+        left: toRem(16);
+        height: toRem(16);
+        width: toRem(16);
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    // Notification Icon
+    &__notification {
+      width: toRem(24);
+      height: toRem(24);
+
+      // @include media("<=tablet") {
+      //   display: none;
+      // }
+    }
+
+    // Profile Section
+    &__profile {
+      display: flex;
+      align-items: center;
+      gap: toRem(8);
+
+      &__image {
+        width: toRem(40);
+        height: toRem(40);
+        border-radius: 50%;
+        object-fit: cover;
+
+        // @include media("<=tablet") {
+        //   width: toRem(30);
+        //   height: toRem(30);
+        // }
+      }
+
+      &__name {
+        font-weight: 500;
+        font-size: toRem(14);
+        line-height: toRem(18);
+        color: #213f7d;
+
+        // @include media("<=tablet") {
+        //   display: none;
+        // }
+      }
+    }
+  }
+
+  // Skeleton for Future Use
+  &__skeleton {
+    margin-left: toRem(17);
+  }
+}
