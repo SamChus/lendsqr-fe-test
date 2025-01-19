@@ -1,4 +1,4 @@
-import styles from "C:/Users/HP/Desktop/lendsqr-test/styles/components/Header.module.scss";
+import styles from "@/styles/components/Header.module.scss";
 import logo from "../assets/svgs/logo.svg";
 import notificationIcon from "../assets/svgs/notification.svg";
 import avatar from "../assets/images/profile_avatar.png";

@@ -10,7 +10,8 @@
       "@eslint/*": ["node_modules/@eslint/*"],
       "@typescript-eslint/*": ["node_modules/@typescript-eslint/*"],
       "@/styles/*": ["src/styles/*"],
-      "@/assets/*": ["src/assets/*"]
+      "@/assets/*": ["src/assets/*"],
+      "@/": ["./*"]
     }
   }
 }

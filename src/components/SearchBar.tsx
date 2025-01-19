@@ -1,4 +1,4 @@
-import "C:/Users/HP/Desktop/lendsqr-test/styles/components/SearchBar.scss";
+import "@/styles/components/SearchBar.scss";
 import searchIcon from "@/assets/svgs/search.svg";
 
 

@@ -1,0 +1,77 @@
+@use "/styles/main.scss" as *;
+
+.mobile__hidden {
+  display: block;
+  @include media("<=tablet") {
+    display: none;
+  }
+}
+
+.desktop__hidden {
+  display: none;
+  @include media("<=tablet") {
+    display: block;
+  }
+}
+
+.dashboardLayout {
+  display: grid;
+  grid-template-columns: 283px 1fr; // Sidebar and content
+  grid-template-rows: auto 1fr; // Header and content
+  height: 100vh;
+  
+
+  @include media("<=tablet") {
+    grid-template-columns: 1fr; // Full-width layout for mobile
+  }
+
+  // Header styles
+  header {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    background-color: white;
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+  }
+
+  // Sidebar styles
+  .sidebar {
+    grid-column: 1 / 2;
+    grid-row: 2 / -1;
+    // background-color: #ffffff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+
+    @include media("<=tablet") {
+      position: absolute;
+      width: 100%;
+      z-index: 999;
+      display: none;
+
+      &.open {
+        display: block;
+      }
+    }
+  }
+
+  // Main content area
+  &__main {
+    grid-column: 2 / -1;
+    grid-row: 2 / -1;
+    background-color: #f8fafc;
+    padding: 2rem;
+    overflow-y: auto;
+
+    @include media("<=tablet") {
+      grid-column: 1 / -1;
+    }
+
+    &__container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+}

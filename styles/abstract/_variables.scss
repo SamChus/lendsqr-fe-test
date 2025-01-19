@@ -8,7 +8,76 @@ $col-darker-grey: #94a3b8;
 $col-radio-red: #e93223;
 $primary-color: #39cdcc;
 $text-color: #213f7d;
-$font-family: 'Inter', sans-serif;
+// $font-family: 'Inter', sans-serif;
+$font-outfit: "Public Sans", serif;
+
+
+// Colors
+$col-primary: #39cdcc; // Main accent color (teal from sidebar and search bar button)
+$col-primary-light: #e6f8f7; // Light version of primary
+$col-secondary: #545f7d; // Dark text color for sidebar items
+$col-light-gray: #f9f9f9; // Sidebar background or general light gray
+$col-gray: #ddd; // Border and line separators
+$col-dark-gray: #666; // Placeholder text color
+$col-black: #000000; // Default black
+$col-light-primary: rgba(57, 205, 204, 0.2); // Hover background for sidebar items
+$col-text-dark: #213f7d; // Dark text color for sidebar items
+
+// Font Sizes
+$font-size-xs: 0.8rem; // Extra small text
+$font-size-sm: 1rem; // Small text (default for body)
+$font-size-md: 1.2rem; // Medium text (e.g., headings)
+$font-size-lg: 1.5rem; // Large text (e.g., titles)
+$font-size-xl: 2rem; // Extra large (e.g., hero titles)
+
+// Font Weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// Spacing (Padding and Margins)
+$spacing-xs: 0.4rem; // Extra small spacing
+$spacing-sm: 0.8rem; // Small spacing
+$spacing-md: 1.2rem; // Medium spacing
+$spacing-lg: 1.6rem; // Large spacing
+$spacing-xl: 2rem; // Extra large spacing
+
+// Borders
+$border-radius-sm: 4px;
+$border-radius-md: 8px; // Default border-radius for buttons
+$border-radius-lg: 12px;
+
+// Shadows
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 8px rgba(0, 0, 0, 0.2);
+$shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.3);
+
+// Z-Indexes
+$z-index-base: 1; // Default content
+$z-index-overlay: 10; // Modals and sidebars
+$z-index-dropdown: 1000; // Dropdown menus
+
+// Breakpoints
+$breakpoint-xs: 480px; // Extra small screens
+$breakpoint-sm: 768px; // Tablets
+$breakpoint-md: 1024px; // Small desktops
+$breakpoint-lg: 1280px; // Large desktops
+
+// Transitions
+$transition-fast: 0.2s;
+$transition-normal: 0.4s;
+$transition-slow: 0.6s;
+
+// Sidebar-Specific Variables
+$sidebar-width: 16rem; // Width of the sidebar
+$sidebar-background: $col-light-gray; // Background color of the sidebar
+$sidebar-hover-background: $col-light-primary; // Hover background color for items
+
+// Search Bar-Specific Variables
+$search-bar-height: 3rem;
+$search-bar-border-radius: $border-radius-md;
+$search-bar-placeholder-color: $col-dark-gray; // Placeholder text
 
 %mg_au {
   margin: 0 auto;
