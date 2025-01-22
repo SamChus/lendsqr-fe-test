@@ -1,0 +1,37 @@
+.actionPanel {
+    width: 180px;
+    height: 150px;
+position: fixed;
+right: 2rem;
+top: 50%;
+transform: translateY(-50%);
+padding: 16px;
+background-color: #ffffff;
+border: 1px solid #e5e7eb;
+border-radius: 8px;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+
+  .actionButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #4b5563;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+
+    &:hover {
+      color: #1f2937;
+      background-color: #f9fafb;
+    }
+
+    .icon {
+      font-size: 16px;
+      color: #9ca3af;
+    }
+  }
+}

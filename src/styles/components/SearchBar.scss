@@ -7,7 +7,7 @@
   overflow: hidden;
   background-color: #ffffff;
   width: 100%;
-  max-width: 300px; /* Adjust the width as per your design */
+  max-width: 400px; /* Adjust the width as per your design */
   height: 40px;
 }
 
@@ -37,9 +37,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 100%;
+  width: 56px;
+  height: 50px;
   background-color: #00c4cc;
+  // overflow: visible;
   cursor: pointer;
 
   img {
@@ -49,6 +50,6 @@
 
   /* Dynamic Variations */
   &--primary {
-    background-color: #007f80;
+    background-color: rgba(57, 205, 204, 1);
   }
 }

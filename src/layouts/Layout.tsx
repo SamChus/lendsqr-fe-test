@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import { useOpenMobileSideNavStore } from "../store/openMobileSideNavStore";
 import "../styles/components/DashboardLayout.scss";
+import { Outlet } from "react-router-dom";
 
 export const dynamic = "force-dynamic";
 
@@ -31,7 +32,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
       <Header />
       {isMobileView ? isMobileSideNavOpen && <Sidebar /> : <Sidebar />}
       <main className="dashboardLayout__main">
-        <div className="dashboardLayout__main__container">{children}</div>
+        <div className="dashboardLayout__main__container">{<Outlet />}</div>
       </main>
     </div>
   );
