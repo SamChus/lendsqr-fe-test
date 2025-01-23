@@ -5,8 +5,10 @@ import styles from "@/styles/components/UserTable.module.scss";
 import filterIcon from "@/assets/svgs/filter.svg";
 import Pagination from "./Pagination";
 import ActionPanel from "./ActiionPanel";
+import { useNavigate } from "react-router-dom";
 
 interface User {
+  id: number;
   organization: string;
   username: string;
   email: string;
@@ -26,6 +28,9 @@ const UserTable = () => {
   const [filteredData, setFilteredData] = useState<User[]>([]);
   const [showFilter, setShowFilter] = useState(false);
   const [showAction, setShowAction] = useState(false);
+  const [user, setUser] = useState<User | null>(null);
+
+  const navigate = useNavigate();
 
   // Pagination states
   const [currentPage, setCurrentPage] = useState(1);
@@ -94,16 +99,21 @@ const UserTable = () => {
   };
 
   const handleViewDetails = () => {
-    alert("View Details clicked");
+    navigate(`/users/${user?.id}`);
   };
 
   const handleBlacklistUser = () => {
-    alert("Blacklist User clicked");
+    alert(`Blacklist ${user?.username}`);
   };
 
   const handleActivateUser = () => {
-    alert("Activate User clicked");
+    alert(`Activate ${user?.username}`);
   };
+
+  const handleAction = (user: User) => {
+    setShowAction(!showAction);
+    setUser(user);
+  }
 
   return (
     <div>
@@ -190,7 +200,7 @@ const UserTable = () => {
                 <td className={styles.action}>
                   <div
                     className={styles.actionDot}
-                    onClick={() => setShowAction(!showAction)}
+                    onClick={() => handleAction(user)}
                   >
                     ...
                   </div>

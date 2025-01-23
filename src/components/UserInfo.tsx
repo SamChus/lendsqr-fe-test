@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./UserDetails.module.scss";
+import styles from "@/styles/components/UserDetails.module.scss";
 
 const UserInfo: React.FC = () => {
   return (

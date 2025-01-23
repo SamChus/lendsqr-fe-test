@@ -1,4 +1,4 @@
-import styles from "./UserDetails.module.scss";
+import styles from "@/styles/components/UserDetails.module.scss";
 
 const UserDetailsHeader = () => {
   return (
