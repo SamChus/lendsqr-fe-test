@@ -12,10 +12,7 @@ const UserDetailsHeader = () => {
           <p className={styles.bankDetails}>9912345678 / Providus Bank</p>
         </div>
       </div>
-      <div className={styles.actionButtons}>
-        <button className={styles.blacklistButton}>Blacklist User</button>
-        <button className={styles.activateButton}>Activate User</button>
-      </div>
+     
     </div>
   );
 };

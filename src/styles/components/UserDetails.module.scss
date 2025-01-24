@@ -1,6 +1,6 @@
 .userDetails {
   padding: 24px;
-  background-color: #f9fafb;
+  background-color: #FBFBFB;
 
   .backButton {
     display: flex;
@@ -13,11 +13,53 @@
     cursor: pointer;
   }
 
+  .titleHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+      margin: 0;
+      color: #213F7D;
+    }
+
+    .actionButtons {
+      display: flex;
+      gap: 10px;
+
+      .blacklistButton,
+      .activateButton {
+        padding: 8px 12px;
+        border-radius: 8px;
+        font-size: 14px;
+        border: none;
+        cursor: pointer;
+        height: 40px;
+        width: 170px;
+        font-weight: 600;
+        background-color: transparent;
+      }
+
+      .blacklistButton {
+        border: 1px solid #E4033B;
+        color: #E4033B;
+      }
+
+      .activateButton {
+        border: 1px solid #39CDCC;
+        color: #39CDCC;
+      }
+    }
+  }
+
   .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #fff; 
+    background: #fff;
     padding: 16px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -51,60 +93,35 @@
         color: #4b5563;
       }
     }
-
-    .actionButtons {
-      display: flex;
-      gap: 8px;
-
-      .blacklistButton,
-      .activateButton {
-        padding: 8px 12px;
-        border-radius: 4px;
-        font-size: 14px;
-        border: none;
-        cursor: pointer;
-      }
-
-      .blacklistButton {
-        background-color: #fef2f2;
-        color: #b91c1c;
-      }
-
-      .activateButton {
-        background-color: #f0fdf4;
-        color: #15803d;
-      }
-    }
   }
 
-.tabs {
-  display: flex;
-  gap: 16px;
-  margin-top: 16px;
-  background: #fff;
-  padding: 8px 16px;
-  border-radius: 8px;
-
-  button {
-    background: none;
-    border: none;
-    font-size: 14px;
-    cursor: pointer;
-    color: #6b7280;
+  .tabs {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+    background: #fff;
     padding: 8px 16px;
+    border-radius: 8px;
 
-    &:hover {
-      color: #1f2937;
-    }
+    button {
+      background: none;
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+      color: #6b7280;
+      padding: 8px 16px;
 
-    &.activeTab {
-      color: #1f2937;
-      font-weight: bold;
-      border-bottom: 2px solid #1f2937;
+      &:hover {
+        color: #1f2937;
+      }
+
+      &.activeTab {
+        color: #1f2937;
+        font-weight: bold;
+        border-bottom: 2px solid #1f2937;
+      }
     }
   }
-}
-
 
   .userInfoSection {
     background: #fff;

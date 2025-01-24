@@ -38,9 +38,19 @@ const UserDetails: React.FC = () => {
 
   return (
     <div className={styles.userDetails}>
-      <button className={styles.backButton}> <BackArrow /> Back to Users</button>
+      <button className={styles.backButton}>
+        {" "}
+        <BackArrow /> Back to Users
+      </button>
+      <div className={styles.titleHeader}>
+        <h1>User Details</h1>
+        <div className={styles.actionButtons}>
+          <button className={styles.blacklistButton}>Blacklist User</button>
+          <button className={styles.activateButton}>Activate User</button>
+        </div>
+      </div>
       <UserDetailsHeader />
-      <UserTabs activeTab={activeTab} setActiveTab={setActiveTab} tabs={tabs}/>
+      <UserTabs activeTab={activeTab} setActiveTab={setActiveTab} tabs={tabs} />
       {renderContent()}
     </div>
   );
