@@ -3,6 +3,7 @@ import UserDetailsHeader from "./UserDetailsHeader";
 import UserTabs from "./Tabs";
 import UserInfo from "./UserInfo";
 import styles from "@/styles/components/UserDetails.module.scss";
+
 import BackArrow from "./BackArrow";
 
 const UserDetails: React.FC = () => {
