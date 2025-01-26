@@ -1,22 +1,15 @@
 import React, { useState } from "react";
 import UserDetailsHeader from "./UserDetailsHeader";
-import UserTabs from "./Tabs";
 import UserInfo from "./UserInfo";
 import styles from "@/styles/components/UserDetails.module.scss";
+
 
 import BackArrow from "./BackArrow";
 
 const UserDetails: React.FC = () => {
      const [activeTab, setActiveTab] = useState("General Details");
 
-     const tabs = [
-       "General Details",
-       "Documents",
-       "Bank Details",
-       "Loans",
-       "Savings",
-       "App and System",
-     ];
+ 
 
      const renderContent = () => {
        switch (activeTab) {
@@ -50,9 +43,8 @@ const UserDetails: React.FC = () => {
           <button className={styles.activateButton}>Activate User</button>
         </div>
       </div>
-      <UserDetailsHeader />
-      <UserTabs activeTab={activeTab} setActiveTab={setActiveTab} tabs={tabs} />
-      {renderContent()}
+      <UserDetailsHeader activeTab={activeTab} setActiveTab={setActiveTab}/>
+      <div className={styles.content}>{renderContent()}</div>
     </div>
   );
 };

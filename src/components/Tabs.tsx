@@ -1,5 +1,6 @@
 import React from "react";
-import styles from "@/styles/components/UserDetails.module.scss";
+import styles from "@/styles/components/UserDetailsHeader.module.scss";
+
 
 interface TabsProps {
     activeTab: string;
